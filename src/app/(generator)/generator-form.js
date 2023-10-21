@@ -1,4 +1,5 @@
 "use client";
+
 import { experimental_useFormState as useFormState } from "react-dom";
 import GeneratorButton from "./generator-button";
 import GeneratedImage from "./generated-image";

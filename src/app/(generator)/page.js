@@ -1,6 +1,5 @@
-import GeneratedImage from "./generated-image";
 import GeneratorForm from "./generator-form";
-import {generateImage} from "./actions";
+import {generateImage} from "../actions/actions";
 
 import styles from "./generator.module.css";
 
@@ -18,9 +17,11 @@ const handleSubmit = async (prevState, formData) => {
 };
 
 export default function Generator() {
+ 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Image Generator.</h1>
+      
       <GeneratorForm handleSubmit={handleSubmit} />
     </div>
   );
