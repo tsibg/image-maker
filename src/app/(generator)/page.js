@@ -20,7 +20,7 @@ export default function Generator() {
  
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Image Generator.</h1>
+      <h1 className={styles.title}>Image Maker.</h1>
       
       <GeneratorForm handleSubmit={handleSubmit} />
     </div>
