@@ -8,12 +8,12 @@ export default function GeneratedImage({ prompt, imageUrl }) {
   });
   return (
     <div className={`${styles.imageWrapper} ${imageUrl? styles.ready :  styles.loading} `}>
-        {!imageUrl && (<dotlottie-player
+        {/* {!imageUrl && (<dotlottie-player
           src="./lottie/loading.lottie"
           autoplay
           loop
           style={{ height: "100%", width: "100%" }}
-        ></dotlottie-player>)}
+        ></dotlottie-player>)} */}
         
         {imageUrl &&<Image src={imageUrl} quality={100} fill alt={prompt} />}
     </div>
