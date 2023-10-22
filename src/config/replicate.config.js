@@ -7,7 +7,6 @@ export default {
   // Model version to a specific Stable Diffusion
   // See https://replicate.com/stability-ai/sdxl
   version: "c221b2b8ef527988fb59bf24a8b97c4561f1c671f73bd389f866bfb27c061316",
-  model: "stability-ai/stable-diffusion:c221b2b8ef527988fb59bf24a8b97c4561f1c671f73bd389f866bfb27c061316",
   // Prompt prefix and suffix is added to the prompt
   promptPreffix: "",
   promptSuffix: "",

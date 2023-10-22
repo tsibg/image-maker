@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
-import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
-export default function GeneratorButton() {
-  const { pending } = useFormStatus()
+export default function GeneratorButton({ isProcessing }) {
+  const { pending } = useFormStatus();
   return (
-    <button disabled={pending} type="submit">
+    <button disabled={pending || isProcessing} type="submit">
       Go
     </button>
   );

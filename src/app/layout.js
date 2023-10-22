@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import styles from "./layout.module.css";
+import styles from "./home.module.css";
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,9 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className={styles.background}></div>
+
         <main className={styles.main}>
-          <div className={styles.background}></div>
-          <div className={styles.content}>{children}</div>
+          <div className={styles.container}>
+            <h1 className={styles.title}><Link href="/">Image Maker.</Link></h1>
+            {children}
+          </div>
         </main>
       </body>
     </html>

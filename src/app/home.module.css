@@ -1,7 +1,5 @@
 .main {
   padding: 0 5vh;
-}
-.content {
   min-height: 90vh;
   max-width: 1024px;
   display: flex;
@@ -9,6 +7,22 @@
   gap: 1rem;
   justify-content: space-between;
   margin: 5vh auto;
+}
+
+.title {
+  font-size: 3rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 3rem;
 }
 
 .background {
@@ -50,9 +64,6 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-  .background {
-  }
-
   .background::before {
     transform: none;
     height: 300px;
