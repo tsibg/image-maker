@@ -2,12 +2,12 @@
 
 import Replicate from "replicate";
 import replicateConfig from "@/config/replicate.config.js";
-import { redirect, notFound } from "next/navigation";
-import { revalidatePath, revalidateTag } from "next/cache";
+import { redirect } from "next/navigation";
+import { revalidateTag } from "next/cache";
 
 const replicate = new Replicate({
   // get your token from https://replicate.com/account
-  auth: replicateConfig.auth, // defaults to process.env.REPLICATE_API_TOKEN
+  auth: replicateConfig.token, // defaults to process.env.REPLICATE_API_TOKEN
 });
 
 export async function generateImage(prevState, formData) {
