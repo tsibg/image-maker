@@ -3,7 +3,6 @@ import "server-only";
 export default {
   //API Token. You can get it from https://replicate.com/account/api-tokens
   token: process.env.REPLICATE_API_TOKEN,
-  authorization: `Token ${process.env.REPLICATE_API_TOKEN}`,
   // Model version to a specific Stable Diffusion
   // See https://replicate.com/stability-ai/sdxl
   version: "c221b2b8ef527988fb59bf24a8b97c4561f1c671f73bd389f866bfb27c061316",

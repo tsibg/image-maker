@@ -8,7 +8,7 @@ export default async function Page({ params: { id } }) {
   const { imageUrl, prompt, error, isProcessing } = await getImage(id);
   return (
     <>
-      <GeneratorImage imageUrl={imageUrl} promp={prompt} />
+      <GeneratorImage isProcessing={isProcessing} imageUrl={imageUrl} promp={prompt} />
       <GeneratorLoader isProcessing={isProcessing} />
       <GeneratorForm
         isProcessing={isProcessing}
