@@ -8,16 +8,16 @@ export default function GeneratedImage({ prompt, imageUrl }) {
   const [isReady, setIsReady] = useState(false);
 
   return (
-    <div className={`${styles.imageWrapper} ${isReady ? styles.ready : ""}`}>
+    <div className={`${styles.imageWrapper} ${isReady ? styles.ready : "" }`}>
       {imageUrl && (
         <a href={imageUrl} target="_blank">
           <Image
             src={imageUrl}
             quality={100}
             onLoad={() => setIsReady(true)}
-            fill
+            width={1024}
+            height={768}
             priority
-            sizes="100vw"
             alt={prompt || "AI Generated image"}
           />
         </a>

@@ -4,6 +4,6 @@ const defaultPrompt = "Sea of clouds";
 export default function Page() {
  
   return (
-      <GeneratorForm prompt={defaultPrompt} />
+      <GeneratorForm defaultPrompt={defaultPrompt} />
   );
 }

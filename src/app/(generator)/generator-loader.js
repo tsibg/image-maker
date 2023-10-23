@@ -12,23 +12,26 @@ export default function GeneratorLoader({ isProcessing }) {
   const params = useParams();
   const [shouldPoll, setShouldPoll] = useState(false);
   const [progress, setProgress] = useState(0);
+  
   useEffect(() => {
     setShouldPoll(isProcessing);
-    setProgress(0);
+    setProgress("Loading...");
   }, [isProcessing]);
 
   useInterval(
     async () => {
-      setShouldPoll(false); //Do not poll while we are processing
-      const data = await getProgress(params.id);
-      // const data = { isProcessing: true, progress: 0 };
+      if (!shouldPoll) return;
+      setShouldPoll(false);
+
+      const data = await getProgress(params.id);   
       console.log("Progress: ", data.progress);
+
       startTransition(() => {
         setShouldPoll(data.isProcessing);
         setProgress(data.progress);
       });
     },
-    shouldPoll ? POLLING_INTERVAL : null
+    isProcessing ? POLLING_INTERVAL : null
   );
 
   return (

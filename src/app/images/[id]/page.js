@@ -9,14 +9,12 @@ export default async function Page({ params: { id } }) {
   return (
     <>
       <GeneratorImage imageUrl={imageUrl} promp={prompt} />
-      <div>
-        <GeneratorLoader isProcessing={isProcessing} />
-        <GeneratorForm
-          isProcessing={isProcessing}
-          error={error}
-          defaultPrompt={prompt}
-        />
-      </div>
+      <GeneratorLoader isProcessing={isProcessing} />
+      <GeneratorForm
+        isProcessing={isProcessing}
+        error={error}
+        defaultPrompt={prompt}
+      />
     </>
   );
 }
