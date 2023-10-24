@@ -44,8 +44,17 @@
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
 
+
 .imageWrapper img {
   object-fit: cover;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+  .imageWrapper.ready {
+    height: 40vh;
+  }
 }
 
 .form {
