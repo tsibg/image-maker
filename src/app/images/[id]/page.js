@@ -3,7 +3,7 @@ import GeneratorImage from "@/app/(generator)/generator-image";
 import GeneratorLoader from "@/app/(generator)/generator-loader";
 import { getImage } from "@/app/actions/replicate";
 
-import styles from "./image.module.css";
+import styles from "./images.module.css";
 
 export default async function Page({ params: { id } }) {
   console.log("Image page: ", id);

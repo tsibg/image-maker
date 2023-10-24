@@ -11,9 +11,9 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   height: 100vh;
-  padding: 4vh 0;
+  padding: 3vh 0;
   max-height: 1000px;
   justify-content: space-between;
 }
