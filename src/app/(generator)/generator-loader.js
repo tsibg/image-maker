@@ -12,33 +12,45 @@ export default function GeneratorLoader({ isProcessing }) {
   const params = useParams();
   const [shouldPoll, setShouldPoll] = useState(false);
   const [progress, setProgress] = useState(0);
-  
+  const [status, setStatus] = useState("loading");
+
   useEffect(() => {
     setShouldPoll(isProcessing);
-    setProgress("Loading...");
+    if (isProcessing) {
+      setProgress(0);
+      setStatus("loading");
+    }
   }, [isProcessing]);
 
   useInterval(
     async () => {
-      if (!shouldPoll) return;
       setShouldPoll(false);
 
-      const data = await getProgress(params.id);   
-      console.log("Progress: ", data.progress);
+      const data = await getProgress(params.id);
+      // const data = { isProcessing: false, progress: 0, progressText: "Loading...", };
+      console.log("Get Progress: ", data.progress);
 
       startTransition(() => {
         setShouldPoll(data.isProcessing);
         setProgress(data.progress);
+        setStatus(data.status);
       });
     },
-    isProcessing ? POLLING_INTERVAL : null
+    shouldPoll ? POLLING_INTERVAL : null
   );
 
   return (
     <>
-      <div className={`${styles.progress} ${isProcessing?styles.processing:''}`}>
-        {isProcessing && <div>Processing: {progress}</div>}
-      </div>
+      {isProcessing && (
+        <div className={`${styles.progress} ${isProcessing ? styles.processing : ''}`}>
+          <div className={styles.pulse}></div>
+          <div className={styles.indicator}>
+
+            <div className={`${styles.perc} ${progress == 0 ? styles.infinity : null}`}>{progress ? progress + "%" : "∞"}</div>
+            <div>{status}</div>
+          </div>
+        </div>
+      )}
     </>
-  );
+  )
 }

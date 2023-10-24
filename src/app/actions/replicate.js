@@ -52,10 +52,8 @@ export async function getImage(id) {
       const imageUrl = imageData.output?.pop();
       const prompt = imageData.input?.prompt;
       const error = imageData.error;
-      let progress = 100;
       const isProcessing =
         imageData.status === "processing" || imageData.status === "starting";
-      
       return { imageUrl, prompt, isProcessing, error };
     })
     .catch((error) => {
@@ -83,15 +81,16 @@ export async function getProgress(id) {
     data.status === "processing" || data.status === "starting";
   if (!isProcessing) {
     revalidateTag("image/" + id);
-    return { isProcessing, progress: data.status };
+    return { isProcessing, progress: 100, status: data.status };
   }
 
   const log = data.logs?.split("\n");
-  let progress = data.status;
+  let progress = 0;
   if (log && log.length > 1) {
-    progress = log.slice(-2).shift();
+    progress = log.slice(-2).shift().split(" %").shift();
+    progress = progress ? parseInt(progress) : 0;
     console.log(progress);
   }
 
-  return { isProcessing, progress };
+  return { isProcessing, progress, status: data.status };
 }
