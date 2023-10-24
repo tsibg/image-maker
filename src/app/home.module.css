@@ -1,12 +1,21 @@
 .main {
-  padding: 0 5vh;
-  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;  
+}
+
+.container {
+  width: 90vw;
   max-width: 1024px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 100vh;  
+  padding: 3vh 0;
+  max-height: 1000px;
   justify-content: space-between;
-  margin: 5vh auto;
 }
 
 .title {
@@ -20,7 +29,7 @@
 
 .background {
   position: absolute;
-  top: 10%;
+  top: 5%;
   width: 100%;
 }
 

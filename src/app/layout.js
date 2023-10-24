@@ -16,10 +16,12 @@ export default function RootLayout({ children }) {
         <div className={styles.background}></div>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            <Link href="/">Image Maker.</Link>
-          </h1>
-          {children}
+          <div className={styles.container}>
+            <h1 className={styles.title}>
+              <Link href="/">Image Maker.</Link>
+            </h1>
+            {children}
+          </div>
         </main>
       </body>
     </html>
