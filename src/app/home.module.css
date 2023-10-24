@@ -1,3 +1,12 @@
+
+.title {
+  font-size: 4rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -17,15 +26,6 @@
   max-height: 1000px;
   justify-content: space-between;
 }
-
-.title {
-  font-size: 2.5rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 
 .background {
   position: absolute;

@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
 import styles from "./home.module.css";
-import Link from "next/link";
+
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,12 +14,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className={styles.background}></div>
-
         <main className={styles.main}>
           <div className={styles.container}>
-            <h1 className={styles.title}>
-              <Link href="/">Image Maker.</Link>
-            </h1>
             {children}
           </div>
         </main>
