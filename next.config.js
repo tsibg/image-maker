@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "pbxt.replicate.delivery",
+        hostname: "replicate.delivery",
       },
     ],
   },
