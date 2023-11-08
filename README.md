@@ -8,7 +8,7 @@ Live Preview: https://image-maker-mu.vercel.app/
 
 Note: I used this project for playground for the experimental [Server Actions](https://nextjs.org/docs/app/api-reference/functions/server-actions) and foundation for a project with Replicate SDK.
 
-Update: Upgraded to NextJS 14 to use now-stable Server Actions.
+Update: Upgraded to NextJS 14 to use now-stable Server Actions. Refactored code for easier reuse.
 
 ## Getting Started
 
@@ -36,13 +36,15 @@ Based on NextJS [App Router](https://nextjs.org/docs/app)
 
 `src/app/actions/replicate.js` - Server Actions for Replicate SDK
 
-`src/app/(generator)` - Client Components for the Image Generator
+`src/app/(generator)` - Generator functionality
 
-`src/app/page.js` -Entry point
+`src/app/(generator)/ui` - Client components
 
-`src/app/images/[id]/page.js` - Image page
+`src/app/(generator)/page.js` - Entry point
+
+`src/app/(generator)/images/[id]/page.js` - Generated Image result
 
 
 ### Improvement ideas
 - Polling of image progress with client-side HTTP requests and Route Handlers, instead of Server Actions.
-- Loading indicators
+- Handle non-existing images (The replicate source image is available for limited time)

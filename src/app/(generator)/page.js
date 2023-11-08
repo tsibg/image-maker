@@ -1,6 +1,6 @@
-import GeneratorForm from "./(generator)/generator-form";
+import GeneratorForm from "./ui/generator-form";
 import Link from "next/link";
-import styles from "./home.module.css";
+import styles from "./generator.module.css";
 
 const defaultPrompt = "Cat in a field of flowers";
 

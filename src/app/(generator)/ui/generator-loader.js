@@ -1,7 +1,7 @@
 "use client";
 import React, { startTransition, useEffect, useState } from "react";
 import { useInterval } from "usehooks-ts";
-import { getProgress } from "../actions/replicate";
+import { getProgress } from "../../actions/replicate";
 import { useParams } from "next/navigation";
 
 import styles from "./generator.module.css";

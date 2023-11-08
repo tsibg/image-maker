@@ -1,12 +1,3 @@
-
-.title {
-  font-size: 4rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -58,9 +49,11 @@
 }
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {}
+@media (hover: hover) and (pointer: fine) {
+}
 
-@media (prefers-reduced-motion) {}
+@media (prefers-reduced-motion) {
+}
 
 /* Mobile */
 @media (max-width: 700px) {
@@ -75,20 +68,5 @@
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0deg);
-  }
+@media (min-width: 701px) and (max-width: 1120px) {
 }

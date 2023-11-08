@@ -1,7 +1,7 @@
 import Link from "next/link";
-import GeneratorForm from "@/app/(generator)/generator-form";
-import GeneratorImage from "@/app/(generator)/generator-image";
-import GeneratorLoader from "@/app/(generator)/generator-loader";
+import GeneratorForm from "@/app/(generator)/ui/generator-form";
+import GeneratorImage from "@/app/(generator)/ui/generator-image";
+import GeneratorLoader from "@/app/(generator)/ui/generator-loader";
 import { getImage } from "@/app/actions/replicate";
 
 import styles from "./images.module.css";

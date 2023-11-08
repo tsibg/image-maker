@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
-import styles from "./home.module.css";
 import { Analytics } from '@vercel/analytics/react';
 
 import "./globals.css";
+import styles from "./layout.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

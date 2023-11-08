@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
-import { generateImage } from "../actions/replicate";
+import { generateImage } from "../../actions/replicate";
 
 import GeneratorButton from "./generator-button";
 import styles from "./generator.module.css";
