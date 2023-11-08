@@ -7,7 +7,8 @@
 Live Preview: https://image-maker-mu.vercel.app/
 
 Note: I used this project for playground for the experimental [Server Actions](https://nextjs.org/docs/app/api-reference/functions/server-actions) and foundation for a project with Replicate SDK.
-Currently, it makes more sense to implement the polling for image progress with Route Handlers and/or Replicate Webhook.
+
+Update: Upgraded to NextJS 14 to use now-stable Server Actions.
 
 ## Getting Started
 
